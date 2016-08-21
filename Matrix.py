@@ -4,9 +4,9 @@ import random
 import string
 
 
-TEXTSIZE = 20
+TEXTSIZE = 12
 
-RES = [200, 200]
+RES = [640, 480]
 
 DisplayDriver.engine.graphics.setRes(RES)
 
@@ -22,7 +22,7 @@ class Line:
         self.xPos = xPos
         self.bottomPos = 0
         self.renderer = None
-        self.spacing = 15
+        self.spacing = 8
         self.length = random.randint(int(RES[1]/self.spacing*0.1),int(RES[1]/self.spacing)*2)
         self.newLetterTick()
 
@@ -74,10 +74,10 @@ class Line:
         self.renderer = None
 
 class MatrixScreen():
-    SIDESPACING = 15
+    SIDESPACING = 8
 
     def __init__(self):
-        self.lineFrequency = 10
+        self.lineFrequency = 5 # The lower the more likley chance
         self.lines = []
         self.sequenceDict = {}
 
