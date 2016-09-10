@@ -23,7 +23,7 @@ class Line:
         self.bottomPos = 0
         self.renderer = None
         self.spacing = 8
-        self.length = random.randint(int(RES[1]/self.spacing*0.1),int(RES[1]/self.spacing)*2)
+        self.length = random.randint(int(RES[1]/self.spacing*0.1),int(RES[1]/self.spacing)*1)
         self.newLetterTick()
 
     def generateRandomLetter():
@@ -74,10 +74,10 @@ class Line:
         self.renderer = None
 
 class MatrixScreen():
-    SIDESPACING = 8
+    SIDESPACING = 7
 
     def __init__(self):
-        self.lineFrequency = 5 # The lower the more likley chance
+        self.lineFrequency = 1 # The lower the more likley chance
         self.lines = []
         self.sequenceDict = {}
 
